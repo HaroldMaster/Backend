@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create JSON string from a JavaScript object.</h2>
+<p> Escriba el nombre del usuario</p>
+<input id="i1">
+<p> Escriba el correo del usuario</p>
+<input id="i2">
+<p> Escriba la contraseña del usuario</p>
+<input id="i3" type="password">
+<button onclick="guardarUsuario()">Guardar</button>
+
+<p id="demo"></p>
+
+<script>
+/*var obj = [{ name: "les", city: {adress: "valle", cityname:"Quito"} }];
+var a = { name: "harold", age: 25, city: {adress: "pomasqui", cityname:"quito"} };
+obj.push(a);
+var buscar = obj.find(x=>x.age==25);
+var myJSON = JSON.stringify(buscar.city.adress);
+document.getElementById("demo").innerHTML =myJSON;
+*/
+function guardarUsuario (){
+var nombre = document.getElementById("i1").value;
+var correo = document.getElementById("i2").value;
+var contrasena = document.getElementById("i3").value;
+var usuarios = [];
+var jsonUsuarios= { id: usuarios.length+1, nombre: nombre, correo: correo, contrasena: contrasena};
+usuarios.push(jsonUsuarios);
+var usuarioEspecifico = usuarios.find(c=>c.id==1);
+var aux= JSON.stringify(usuarios);
+document.getElementById("demo").innerHTML="El usuario: "+usuarioEspecifico.nombre+ "<br>tiene el correo: "+ usuarioEspecifico.correo;
+}
+</script>
+
+</body>
+</html>
