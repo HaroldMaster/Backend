@@ -30,7 +30,8 @@ var jsonUsuarios= { id: usuarios.length+1, nombre: nombre, correo: correo, contr
 usuarios.push(jsonUsuarios);
 var usuarioEspecifico = usuarios.find(c=>c.id==1);
 var aux= JSON.stringify(usuarios);
-document.getElementById("demo").innerHTML="El usuario: "+usuarioEspecifico.nombre+ "<br>tiene el correo: "+ usuarioEspecifico.correo;
+//document.getElementById("demo").innerHTML="El usuario: "+usuarioEspecifico.nombre+ "<br>tiene el correo: "+ usuarioEspecifico.correo;
+document.getElementById("demo").innerHTML="el usuario "+usuarioEspecifico.nombre+"ha sido registrado con exito";
 }
 </script>
 
